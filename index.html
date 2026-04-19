@@ -22,6 +22,10 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, sans-serif;
@@ -284,5 +288,14 @@
         </div>
       </section>
     </main>
+
+    <script>
+      document.querySelectorAll('.cta-button').forEach((button) => {
+        button.addEventListener('click', () => {
+          const position = button.dataset.ctaPosition || 'unknown';
+          console.log('[CTA_CLICK]', position);
+        });
+      });
+    </script>
   </body>
 </html>
