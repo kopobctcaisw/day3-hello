@@ -4,73 +4,262 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI 코드어시스턴스 교육 | 40대 비전공 실무 전환</title>
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --surface: #ffffff;
+        --surface-soft: #eef3f9;
+        --text: #132033;
+        --muted: #475569;
+        --primary: #0f766e;
+        --primary-dark: #115e59;
+        --stroke: #d8e2ee;
+        --shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+        --max-width: 960px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+        font-size: 18px;
+        line-height: 1.65;
+        color: var(--text);
+        background: linear-gradient(180deg, #f4f7fb 0%, #f7f9fd 38%, #f4f7fb 100%);
+      }
+
+      main {
+        display: block;
+      }
+
+      section,
+      header {
+        padding: 3.5rem 0;
+      }
+
+      .container {
+        width: min(100%, var(--max-width));
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.22;
+        margin-top: 0.75rem;
+      }
+
+      h2 {
+        font-size: clamp(1.55rem, 3vw, 2.1rem);
+        line-height: 1.3;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+        line-height: 1.35;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      .hero {
+        padding-top: 4.25rem;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin: 0;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #0b4f4b;
+        border-radius: 999px;
+        background: #d9f3f0;
+      }
+
+      .hero p {
+        margin: 1rem 0 0;
+        max-width: 48ch;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        margin-top: 1.5rem;
+        padding: 0.8rem 1.3rem;
+        border-radius: 0.85rem;
+        background: var(--primary);
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 800;
+        line-height: 1.2;
+        box-shadow: 0 8px 18px rgba(15, 118, 110, 0.24);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .cta-button:hover {
+        background: var(--primary-dark);
+        transform: translateY(-1px);
+      }
+
+      .proof-cards {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .proof-card,
+      .content-card {
+        background: var(--surface);
+        border: 1px solid var(--stroke);
+        border-radius: 1rem;
+        padding: 1.25rem;
+        box-shadow: var(--shadow);
+      }
+
+      .proof-card p {
+        margin: 0.7rem 0 0;
+      }
+
+      .proof-card p:last-child {
+        font-size: 0.95rem;
+      }
+
+      .program ol,
+      .pricing ul {
+        margin: 0.9rem 0 0;
+        padding-left: 1.2rem;
+      }
+
+      .program li,
+      .pricing li {
+        margin-top: 0.4rem;
+      }
+
+      .pricing .content-card,
+      .cta .content-card {
+        background: var(--surface-soft);
+      }
+
+      .cta h2,
+      .cta p {
+        max-width: 44ch;
+      }
+
+      @media (min-width: 768px) {
+        section,
+        header {
+          padding: 4.5rem 0;
+        }
+
+        .container {
+          padding: 0 1.25rem;
+        }
+
+        .proof-cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
   </head>
   <body>
     <header id="hero" class="hero">
-      <p class="eyebrow">비전공자 · 40대 이상 실무 전환 집중 코스</p>
-      <h1>비전공 40대도 AI 코딩으로 실무 전환 가능</h1>
-      <p>
-        나이와 전공의 제약 없이, AI 코드어시스턴스를 활용해 실제 업무에 바로 적용 가능한 자동화와
-        서비스 구현 역량을 8주 안에 완성합니다.
-      </p>
-      <a
-        class="cta-button"
-        data-cta-position="hero"
-        href="https://open.kakao.com/o/REPLACE_ME"
-        target="_blank"
-        rel="noopener noreferrer"
-        >카톡으로 무료 상담 받기</a
-      >
-    </header>
-
-    <main>
-      <section id="proof" aria-labelledby="proof-title" class="proof">
-        <h2 id="proof-title">수강생 성과 사례</h2>
-        <article class="proof-card">
-          <h3>업무 자동화 도입으로 주간 반복 업무 6시간 절감</h3>
-          <p>보고서 취합·정리·요약 과정을 자동화해 핵심 의사결정 업무에 집중할 시간을 확보했습니다.</p>
-          <p>경영관리 직무 · 48세 · 비전공</p>
-        </article>
-        <article class="proof-card">
-          <h3>8주 내 사내 도구 프로토타입 1건 배포</h3>
-          <p>아이디어 단계였던 업무 개선안을 실제 웹 기반 도구로 구현해 팀 내 시범 운영까지 진행했습니다.</p>
-          <p>운영기획 직무 · 42세 · 비전공</p>
-        </article>
-      </section>
-
-      <section id="program" aria-labelledby="program-title" class="program">
-        <h2 id="program-title">프로그램 소개</h2>
-        <p>AI와 함께 코딩하는 방법을 실무 관점으로 익히며 아래 3단계를 순차적으로 학습합니다.</p>
-        <ol>
-          <li>AI 코드어시스턴스 활용법과 문제 정의 프레임 학습</li>
-          <li>Python 기반 업무 자동화 미니 프로젝트 수행</li>
-          <li>개인 실무 과제를 서비스 형태로 구현 및 피드백</li>
-        </ol>
-      </section>
-
-      <section id="pricing" aria-labelledby="pricing-title" class="pricing">
-        <h2 id="pricing-title">수강 방식 · 기간 · 비용</h2>
-        <ul>
-          <li>수강 방식: 온라인 라이브 강의 + 주차별 과제 피드백</li>
-          <li>수강 기간: 8주 집중 과정 (주 2회 세션)</li>
-          <li>수강 비용: 990,000원 (부가세 포함)</li>
-          <li>포함 항목: 실습 템플릿, 녹화본, Q&amp;A 지원</li>
-        </ul>
-      </section>
-
-      <section id="faq"></section>
-
-      <section id="cta" aria-labelledby="cta-title" class="cta">
-        <h2 id="cta-title">지금 무료 상담으로 내 전환 가능성을 확인해보세요</h2>
-        <p>개인 업무 배경에 맞춰 어떤 프로젝트부터 시작하면 좋을지 1:1로 안내해드립니다.</p>
+      <div class="container">
+        <p class="eyebrow">비전공자 · 40대 이상 실무 전환 집중 코스</p>
+        <h1>비전공 40대도 AI 코딩으로 실무 전환 가능</h1>
+        <p>
+          나이와 전공의 제약 없이, AI 코드어시스턴스를 활용해 실제 업무에 바로 적용 가능한 자동화와
+          서비스 구현 역량을 8주 안에 완성합니다.
+        </p>
         <a
           class="cta-button"
-          data-cta-position="bottom"
+          data-cta-position="hero"
           href="https://open.kakao.com/o/REPLACE_ME"
           target="_blank"
           rel="noopener noreferrer"
           >카톡으로 무료 상담 받기</a
         >
+      </div>
+    </header>
+
+    <main>
+      <section id="proof" aria-labelledby="proof-title" class="proof">
+        <div class="container">
+          <h2 id="proof-title">수강생 성과 사례</h2>
+          <div class="proof-cards">
+            <article class="proof-card">
+              <h3>업무 자동화 도입으로 주간 반복 업무 6시간 절감</h3>
+              <p>보고서 취합·정리·요약 과정을 자동화해 핵심 의사결정 업무에 집중할 시간을 확보했습니다.</p>
+              <p>경영관리 직무 · 48세 · 비전공</p>
+            </article>
+            <article class="proof-card">
+              <h3>8주 내 사내 도구 프로토타입 1건 배포</h3>
+              <p>아이디어 단계였던 업무 개선안을 실제 웹 기반 도구로 구현해 팀 내 시범 운영까지 진행했습니다.</p>
+              <p>운영기획 직무 · 42세 · 비전공</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="program" aria-labelledby="program-title" class="program">
+        <div class="container">
+          <div class="content-card">
+            <h2 id="program-title">프로그램 소개</h2>
+            <p>AI와 함께 코딩하는 방법을 실무 관점으로 익히며 아래 3단계를 순차적으로 학습합니다.</p>
+            <ol>
+              <li>AI 코드어시스턴스 활용법과 문제 정의 프레임 학습</li>
+              <li>Python 기반 업무 자동화 미니 프로젝트 수행</li>
+              <li>개인 실무 과제를 서비스 형태로 구현 및 피드백</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" aria-labelledby="pricing-title" class="pricing">
+        <div class="container">
+          <div class="content-card">
+            <h2 id="pricing-title">수강 방식 · 기간 · 비용</h2>
+            <ul>
+              <li>수강 방식: 온라인 라이브 강의 + 주차별 과제 피드백</li>
+              <li>수강 기간: 8주 집중 과정 (주 2회 세션)</li>
+              <li>수강 비용: 990,000원 (부가세 포함)</li>
+              <li>포함 항목: 실습 템플릿, 녹화본, Q&amp;A 지원</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq"></section>
+
+      <section id="cta" aria-labelledby="cta-title" class="cta">
+        <div class="container">
+          <div class="content-card">
+            <h2 id="cta-title">지금 무료 상담으로 내 전환 가능성을 확인해보세요</h2>
+            <p>개인 업무 배경에 맞춰 어떤 프로젝트부터 시작하면 좋을지 1:1로 안내해드립니다.</p>
+            <a
+              class="cta-button"
+              data-cta-position="bottom"
+              href="https://open.kakao.com/o/REPLACE_ME"
+              target="_blank"
+              rel="noopener noreferrer"
+              >카톡으로 무료 상담 받기</a
+            >
+          </div>
+        </div>
       </section>
     </main>
   </body>
