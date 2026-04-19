@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "secondary": "#466460",
+                    "primary-fixed-dim": "#80d5cb",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#edeef1",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#80d5cb",
+                    "on-secondary-fixed": "#00201d",
+                    "on-surface-variant": "#3e4947",
+                    "tertiary": "#7f4025",
+                    "on-background": "#191c1e",
+                    "surface-container-low": "#f2f3f6",
+                    "on-primary-container": "#a3faef",
+                    "on-secondary-container": "#4a6864",
+                    "surface": "#f8f9fc",
+                    "secondary-fixed": "#c8e9e4",
+                    "primary-container": "#0f766e",
+                    "tertiary-fixed": "#ffdbce",
+                    "outline-variant": "#bdc9c6",
+                    "outline": "#6e7977",
+                    "primary": "#005c55",
+                    "inverse-on-surface": "#f0f1f4",
+                    "on-secondary-fixed-variant": "#2e4c48",
+                    "surface-container-high": "#e7e8eb",
+                    "tertiary-fixed-dim": "#ffb598",
+                    "secondary-container": "#c5e6e1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f8f9fc",
+                    "on-surface": "#191c1e",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#00504a",
+                    "surface-container-highest": "#e1e2e5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#9cf2e8",
+                    "tertiary-container": "#9c573a",
+                    "surface-dim": "#d9dadd",
+                    "secondary-fixed-dim": "#accdc8",
+                    "on-tertiary-fixed-variant": "#72361b",
+                    "surface-variant": "#e1e2e5",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#006a63",
+                    "background": "#f8f9fc",
+                    "on-tertiary-container": "#ffe5db",
+                    "inverse-surface": "#2e3133",
+                    "on-tertiary-fixed": "#370e00",
+                    "on-primary-fixed": "#00201d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "body": ["Public Sans", "sans-serif"],
+                    "label": ["Public Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        body { font-family: 'Public Sans', sans-serif; background-color: #f8f9fc; color: #191c1e; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-[#f8f9fc]/90 dark:bg-[#191c1e]/90 backdrop-blur-md text-[#005c55] dark:text-[#c5e6e1] font-['Manrope'] font-bold text-sm tracking-wide docked full-width top-0 sticky z-50 no-border transition-colors">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-[#191c1e] dark:text-[#f8f9fc]">The Guided Authority</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#191c1e]/70 dark:text-[#f8f9fc]/70 hover:text-[#005c55] transition-colors" href="#">성공사례</a>
+<a class="text-[#191c1e]/70 dark:text-[#f8f9fc]/70 hover:text-[#005c55] transition-colors" href="#">커리큘럼</a>
+<a class="text-[#191c1e]/70 dark:text-[#f8f9fc]/70 hover:text-[#005c55] transition-colors" href="#">수강료</a>
+<a class="text-[#191c1e]/70 dark:text-[#f8f9fc]/70 hover:text-[#005c55] transition-colors" href="#">FAQ</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold hover:opacity-80 transition-all duration-300 scale-95 active:scale-100">무료 상담 받기</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center pt-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 flex flex-col gap-8">
+<div class="inline-flex items-center px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-sm font-semibold w-fit">
+<span class="material-symbols-outlined mr-2 text-sm">auto_awesome</span>
+                        비전공자/40대 이상을 위한 실무 AI 코딩
+                    </div>
+<h1 class="text-[3.5rem] leading-[1.1] font-extrabold tracking-tight text-on-surface">
+                        비전공 40대도<br/>
+                        AI 코딩으로<br/>
+<span class="text-primary">실무 전환 가능</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        나이와 전공은 제약이 아닙니다. AI 도구를 활용해 복잡한 로직을 구축하고 업무 효율을 극대화하는 법을 체계적인 멘토링으로 전수합니다.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary text-on-primary text-lg px-8 py-4 rounded-xl font-bold shadow-[0_12px_40px_rgba(25,28,30,0.06)] hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                            카톡으로 무료 상담 받기
+                            <span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="bg-surface-container-high text-on-surface text-lg px-8 py-4 rounded-xl font-bold hover:bg-surface-container-highest transition-colors">
+                            프로그램 자세히 보기
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden bg-surface-container-low shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional mature mentor in a clean, high-end architectural office environment looking at a large digital screen with clean code and data visualization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQpEpBFkMt_LgG3WQD8DctFDQzUQczzfxgOkX_c_AScNtVP0AhiTzBe0tyZwJWvO-ul0Co9LHrrnwZ0uBCrNmwcVe6X-sOjHu1pctZo8DVuLaqmXKq3eg60OGi-dVneAKQmozdSgOQMQbSKDAWhAx5S-87EvdY8UiIXG3q_onEeXS_J0SnkXvEqfCdcsW8KSP_uG_bQOg02UhlkiduTudrgQQoB4q7_n9kZ55NgxhSud_3HlMFwjFPzA8k-wpvS8AXWftZBDHYB1w"/>
+</div>
+<!-- AI Insight Floating Widget -->
+<div class="absolute -bottom-6 -left-6 p-6 rounded-xl bg-surface-container-lowest/70 backdrop-blur-xl border border-white/20 shadow-xl max-w-[240px]">
+<p class="text-sm font-semibold text-primary mb-1">AI 코딩 Insight</p>
+<p class="text-base text-on-surface leading-tight font-medium">"40대 비전공자도 8주 만에 독자적인 업무 자동화 툴 제작 성공"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories (Proof) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col gap-4 mb-20 max-w-3xl">
+<h2 class="text-[2.5rem] font-extrabold text-on-surface">증명된 변화</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">이미 많은 비전공 시니어 전문가들이 AI를 통해 자신의 실무 능력을 재정의하고 있습니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bento Card 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col gap-6 shadow-sm">
+<div class="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">schedule</span>
+</div>
+<h3 class="text-2xl font-bold">주간 보고서 작성<br/>6시간 단축</h3>
+<p class="text-on-surface-variant text-lg">데이터 수집부터 요약까지 AI 파이프라인 구축으로 반복 업무에서 해방되었습니다.</p>
+<div class="mt-auto pt-8 border-t border-surface-container-high text-sm font-semibold text-primary">
+                            경영관리직 48세 최OO님
+                        </div>
+</div>
+<!-- Bento Card 2 -->
+<div class="md:col-span-2 bg-primary-container p-10 rounded-xl flex flex-col md:flex-row gap-10 items-center overflow-hidden relative">
+<div class="flex-1 z-10">
+<div class="w-14 h-14 bg-on-primary/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary">rocket_launch</span>
+</div>
+<h3 class="text-3xl font-bold text-on-primary mb-4">8주 만에 독자적인<br/>서비스 프로토타입 개발</h3>
+<p class="text-on-primary-container text-lg leading-relaxed">아이디어만 있던 서비스를 직접 코딩하여 사내 배포까지 완료했습니다.</p>
+</div>
+<div class="flex-1 w-full md:w-1/2 aspect-video rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist UI of a business productivity application showing charts and automated workflows on a laptop screen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9e1azCbTro8UtjJTUlW8qLl37r9Yw-pGmbph74PP4Q4i_ABONmxt0zEwl1lUARCAwi3ydhY_R-JRTmHPhGcuCAsDoJsuq95NRNAUaJx2dADylMKzyZ7no1Gqv7UBZbsn2h0WtnCT7JYWh96lefLwjfDs0wJCztUkOE9zjwz9mp8Oo9LDOsrJr8ftzPhkZVpo54YLcFgY91Q-BHRl8HlzY6hTCzi66lMCPXfKDqiz__cDRb7C12vE2GBGGPwNGIgKUGQdaKo4N6RU"/>
+</div>
+</div>
+<!-- Bento Card 3 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col md:flex-row-reverse gap-10 items-center">
+<div class="flex-1">
+<div class="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">precision_manufacturing</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">데이터 시각화 대시보드 자동화</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">복잡한 엑셀 수식 대신 파이썬과 AI를 활용해 실시간 대시보드를 구축했습니다.</p>
+</div>
+<div class="flex-1 w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a sleek tablet displaying high-end, colorful data visualization charts in a dark, professional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvd-zY7a4aX5gjkXrhiFzL-LKs9tptTw3GX0oTYOTAaNgvU5e6wcMwIofoWHnwk3OPeWmJ3wVwadPNN-59M9tNrsjDYVHmYQxlZNMqipQ5PsZZmHRP0wu0iF9CMw9uMXHT3hNqMLHRQZsqAKErvbsPTscQMGk72z22s7lQ0eCu2HzEk_F2BpXXmXFhVR7pLVoRR1vg0Bkcd_qR70lnTy8RnL3Pb7xLVxC37YoiMtmgMaeim6_UttQUdzdVFe31Wwe2Xj7CnqdpzkQ"/>
+</div>
+</div>
+<!-- Bento Card 4 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col gap-6 shadow-sm">
+<div class="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">psychology</span>
+</div>
+<h3 class="text-2xl font-bold">커리어<br/>전환 성공</h3>
+<p class="text-on-surface-variant text-lg">전통 산업에서 기술 중심 기획자로 성공적으로 이직했습니다.</p>
+<div class="mt-auto pt-8 border-t border-surface-container-high text-sm font-semibold text-primary">
+                            마케팅 팀장 42세 박OO님
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Program Introduction -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div class="sticky top-32">
+<h2 class="text-[3rem] font-extrabold leading-tight text-on-surface mb-8">무엇을 배우나요?</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10">
+                            단순한 문법 암기가 아닙니다. <br/>
+                            AI와 대화하며 문제를 해결하는 <span class="font-bold text-primary">'AI 아키텍처 사고법'</span>을 익힙니다.
+                        </p>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="text-lg font-bold">AI 프롬프트 엔지니어링</h4>
+<p class="text-on-surface-variant">코드를 생성하고 디버깅하기 위한 최적의 질문 기술</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="text-lg font-bold">Python 실무 자동화</h4>
+<p class="text-on-surface-variant">엑셀, 이메일, 웹 데이터 수집 자동화 스크립트 작성</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="text-lg font-bold">웹 서비스 기초 구축</h4>
+<p class="text-on-surface-variant">자신만의 아이디어를 실제 웹 상에 구현하는 법</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="p-10 rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm">
+<span class="text-primary font-bold block mb-4">Phase 01</span>
+<h3 class="text-2xl font-bold mb-4">AI와 코딩의 원리 이해</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed">컴퓨팅 사고력을 기르고 AI 도구(Cursor, ChatGPT 등)를 업무 파트너로 활용하는 기초를 다집니다.</p>
+</div>
+<div class="p-10 rounded-xl bg-surface-container-low border border-surface-container transition-all hover:scale-[1.02]">
+<span class="text-primary font-bold block mb-4">Phase 02</span>
+<h3 class="text-2xl font-bold mb-4">실무 프로젝트 밀착 가이드</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed">배운 내용을 본인의 실제 업무에 적용합니다. 멘토와 1:1로 프로젝트의 방향성을 설정하고 구현합니다.</p>
+</div>
+<div class="p-10 rounded-xl bg-surface-container-high border border-surface-container transition-all hover:scale-[1.02]">
+<span class="text-primary font-bold block mb-4">Phase 03</span>
+<h3 class="text-2xl font-bold mb-4">성과 발표 및 지속적 케어</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed">결과물을 공유하고 커뮤니티를 통해 꾸준히 기술 트렌드를 업데이트받을 수 있는 환경을 제공합니다.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & Info -->
+<section class="py-32">
+<div class="max-w-5xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-16 shadow-[0_32px_80px_rgba(0,0,0,0.04)] relative overflow-hidden text-center">
+<div class="absolute top-0 right-0 p-8">
+<span class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full text-sm font-bold tracking-wider">PREMIUM CLASS</span>
+</div>
+<h2 class="text-4xl font-extrabold mb-8">AI 실무 전환 8주 완성 코스</h2>
+<div class="flex flex-wrap justify-center gap-12 mb-12">
+<div class="text-center">
+<p class="text-on-surface-variant text-sm mb-2">교육 방식</p>
+<p class="text-xl font-bold">온라인 라이브 + 밀착 피드백</p>
+</div>
+<div class="text-center">
+<p class="text-on-surface-variant text-sm mb-2">교육 기간</p>
+<p class="text-xl font-bold">총 8주 과정</p>
+</div>
+<div class="text-center">
+<p class="text-on-surface-variant text-sm mb-2">정원</p>
+<p class="text-xl font-bold">기수별 20명 한정</p>
+</div>
+</div>
+<div class="inline-block py-8 px-12 bg-surface-container-low rounded-xl mb-12">
+<p class="text-on-surface-variant text-lg mb-1">수강료</p>
+<p class="text-[3.5rem] font-extrabold text-primary">990,000 <span class="text-2xl font-bold text-on-surface">KRW</span></p>
+</div>
+<div class="flex flex-col gap-6 items-center">
+<button class="w-full max-w-md bg-primary text-on-primary text-xl px-12 py-5 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform">
+                            지금 바로 수강 신청하기
+                        </button>
+<p class="text-on-surface-variant">카드 할부 및 법인 결제 가능</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-3xl mx-auto px-8">
+<h2 class="text-[2.5rem] font-extrabold text-center mb-20">궁금한 점이 있으신가요?</h2>
+<div class="space-y-6">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 cursor-pointer">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold">진짜 비전공자도 따라올 수 있나요?</h3>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="mt-4 text-lg text-on-surface-variant leading-relaxed">
+                            네, 가능합니다. 저희 교육의 핵심은 코딩 언어를 외우는 것이 아니라 AI와 소통하는 법을 배우는 것입니다. 기초부터 차근차근, 실무에 바로 쓸 수 있는 기술 위주로 교육합니다.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 cursor-pointer">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold">직장 생활과 병행이 가능한가요?</h3>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="mt-4 text-lg text-on-surface-variant leading-relaxed">
+                            수업은 퇴근 후 저녁 시간대에 온라인으로 진행됩니다. 모든 강의는 다시보기가 제공되며, 평일 낮에도 메신저를 통해 실시간 질문 답변이 가능합니다.
+                        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 cursor-pointer">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold">8주 만에 정말 결과물이 나오나요?</h3>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="mt-4 text-lg text-on-surface-variant leading-relaxed">
+                            본 교육은 이론보다는 실습 비중이 80% 이상입니다. 커리큘럼 중간부터 본인의 실무 프로젝트를 병행하기 때문에 8주 후에는 반드시 손에 잡히는 결과물을 가져가시게 됩니다.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="py-32 bg-primary">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="text-[3.5rem] font-extrabold text-on-primary leading-tight mb-8">
+                    새로운 가능성의<br/>시작을 함께합니다
+                </h2>
+<p class="text-xl text-on-primary-container mb-12 opacity-90">
+                    지금 무료 상담을 통해 당신의 실무가 어떻게 변할 수 있는지 확인해 보세요.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-white text-primary text-xl px-12 py-5 rounded-xl font-extrabold hover:scale-105 transition-transform flex items-center justify-center gap-3">
+                        카톡으로 무료 상담 받기
+                        <span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f2f3f6] dark:bg-[#191c1e] full-width py-16 px-8 mt-24 tonal-shift-top">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto w-full border-t border-[#191c1e]/5 pt-12">
+<div>
+<div class="text-xl font-bold text-[#191c1e] dark:text-[#f8f9fc] mb-6">The Guided Authority</div>
+<p class="font-['Public_Sans'] text-base leading-relaxed text-[#191c1e]/60 dark:text-[#f8f9fc]/60 max-w-md">
+                    © 2024 The Guided Authority. All rights reserved. 비전공자를 위한 AI 코딩 교육의 기준.
+                </p>
+</div>
+<div class="flex flex-col md:items-end gap-8">
+<nav class="flex flex-wrap gap-8 font-medium">
+<a class="text-[#191c1e]/60 dark:text-[#f8f9fc]/60 hover:text-[#005c55] dark:hover:text-[#c5e6e1] underline-offset-4 hover:underline" href="#">이용약관</a>
+<a class="text-[#191c1e]/60 dark:text-[#f8f9fc]/60 hover:text-[#005c55] dark:hover:text-[#c5e6e1] underline-offset-4 hover:underline" href="#">개인정보처리방침</a>
+<a class="text-[#191c1e]/60 dark:text-[#f8f9fc]/60 hover:text-[#005c55] dark:hover:text-[#c5e6e1] underline-offset-4 hover:underline" href="#">인재채용</a>
+<a class="text-[#191c1e]/60 dark:text-[#f8f9fc]/60 hover:text-[#005c55] dark:hover:text-[#c5e6e1] underline-offset-4 hover:underline" href="#">고객센터</a>
+</nav>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
