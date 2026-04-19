@@ -26,6 +26,12 @@
         scroll-behavior: smooth;
       }
 
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
       body {
         margin: 0;
         font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, sans-serif;
@@ -290,10 +296,15 @@
     </main>
 
     <script>
+      const shouldLogCtaClicks =
+        location.hostname === 'localhost' ||
+        location.hostname === '127.0.0.1' ||
+        location.search.includes('debugCta=1');
+
       document.querySelectorAll('.cta-button').forEach((button) => {
         button.addEventListener('click', () => {
           const position = button.dataset.ctaPosition || 'unknown';
-          console.log('[CTA_CLICK]', position);
+          if (shouldLogCtaClicks) console.log('[CTA_CLICK]', position);
         });
       });
     </script>
